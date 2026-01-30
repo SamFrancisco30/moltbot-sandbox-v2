@@ -1,9 +1,0 @@
-{
-  "browser": {
-    "profiles": {
-      "cloudflare": {
-        "cdpUrl": "https://moltbot-sandbox-v2.czx211355007.workers.dev/cdp?secret=m9NhRK6g9oCirnGPJEimCI73pkII4rQC"
-      }
-    }
-  }
-}
