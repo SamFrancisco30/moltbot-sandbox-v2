@@ -163,6 +163,17 @@ if (config.models?.providers?.anthropic?.models) {
     }
 }
 
+// Remove stale channel configs restored from R2 when env vars are missing
+if (!process.env.TELEGRAM_BOT_TOKEN) {
+    delete config.channels.telegram;
+}
+if (!process.env.DISCORD_BOT_TOKEN) {
+    delete config.channels.discord;
+}
+if (!(process.env.SLACK_BOT_TOKEN && process.env.SLACK_APP_TOKEN)) {
+    delete config.channels.slack;
+}
+
 
 
 // Gateway configuration
